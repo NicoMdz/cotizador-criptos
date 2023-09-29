@@ -65,7 +65,8 @@ function App() {
         const resultado = await respuesta.json()
         //Una sintaxis diferente para hacer que en el objeto resultado.display busque una propiedad que tenga el mismo nombre que la criptomoneda y luego que busque una con el mismo nombre de la moneda
         setCotizacion(resultado.DISPLAY[criptomoneda][moneda])
-      setCargando(false)
+        setCargando(false)
+        console.log(resultado)
     }
     cotizarCripto()
     }

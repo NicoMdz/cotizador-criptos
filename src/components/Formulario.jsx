@@ -28,8 +28,9 @@ const Formulario = ({setMonedas}) => {
 
     const [criptos,setCriptos] = useState([])
     const [error,setError] = useState(false)
-    //Custom Hooks (Para los Select) //Como una destructuración tambien puede verse
-    const [ moneda, SelectMonedas ] = useSelectMonedas("Elige tu moneda", monedas)
+    //Custom Hooks (Para los Select) //Como una destructuración tambien puede verse 
+    //const [state,SelectMonedas(Componente Select)]
+    const [ moneda, SelectMonedas ] = useSelectMonedas("Elige tu moneda", monedas) 
     const [ criptomoneda, SelectCriptoMoneda ] = useSelectMonedas("Elige tu Criptomoneda", criptos)
     //useEffect que hará consulta a la API cuando esté cargado el componente, una sola vez
     useEffect(() => {

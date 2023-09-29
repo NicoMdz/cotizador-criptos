@@ -44,10 +44,15 @@ const Cotizacion = ({cotizacion}) => {
     const { PRICE, HIGHDAY, LOWDAY, CHANGEPCT24HOUR, IMAGEURL, LASTUPDATE } = cotizacion;
     return (
     <Contenedor> {/* Buscar la imagen con la url de la página de la api ya que no la tenemos descargada */}
-        <Imagen 
+        {/* <Imagen 
             src={`https://cryptocompare.com/${IMAGEURL}`} 
-            alt="Imagen Cripto"
-        /> 
+            alt="Imagen Cripto"       
+        />  */}
+        <Imagen 
+        src={`https://cryptocompare.com/${IMAGEURL}`} 
+        alt="Imagen Cripto"  
+        fetchpriority="high"
+        />
         <div>            
        <Precio>El precio es de: <span>{PRICE}</span></Precio>
        <Texto>El precio más alto del día: <span>{HIGHDAY}</span></Texto>
